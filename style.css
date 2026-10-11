@@ -625,3 +625,75 @@ h1 {
     outline: 2px solid #6488ed;
     outline-offset: 3px;
 }
+
+/* Website footer and download button */
+.taskflow-footer {
+    margin: 32px auto 12px;
+    text-align: center;
+}
+
+.taskflow-footer p {
+    font-size: 13px;
+    opacity: 0.7;
+    margin-bottom: 16px;
+}
+
+.taskflow-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.taskflow-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.taskflow-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+.taskflow-download {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+/* Small GitHub logo button */
+.taskflow-github-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+    border-radius: 50%;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.taskflow-github-icon svg {
+    display: block;
+    width: 21px;
+    height: 21px;
+}
+
+.taskflow-github-icon:hover {
+    color: var(--text);
+    transform: scale(1.12);
+}
+
+.taskflow-github-icon:focus-visible {
+    outline: 2px solid #6488ed;
+    outline-offset: 3px;
+}
