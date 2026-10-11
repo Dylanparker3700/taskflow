@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <main class="app">
+        <header class="topbar">
+            <div class="window-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+
+            <div class="brand">Task<span>Flow</span></div>
+
+            <button id="themeToggle" class="theme-toggle"
+                aria-label="Toggle colour theme">
+                <span id="themeIcon">☾</span>
+            </button>
+        </header>
+
+        <section class="task-section">
+            <div class="eyebrow">YOUR PERSONAL SPACE</div>
+            <h1>Today<span class="title-dot">.</span></h1>
+
+            <nav class="tabs">
+                <button class="tab active" id="currentTab">My List</button>
+                <button class="tab" id="savedTab">Saved Lists</button>
+            </nav>
+
+            <section id="currentView">
+                <div class="task-card">
+                    <div class="list-heading">
+                        <span>YOUR TASKS</span>
+                        <span id="taskCount">0 tasks</span>
+                    </div>
+
+                    <div class="add-task-row">
+                        <span class="plus-icon">+</span>
+                        <input id="taskinput" type="text"
+                            placeholder="What needs doing?"
+                            autocomplete="off">
+                        <button id="addtaskbutton">
+                            Add <span>↗</span>
+                        </button>
+                    </div>
+
+                    <ul id="taskList"></ul>
+
+                    <div class="list-actions">
+                        <button id="saveListButton" class="save-button">
+                            Save list
+                        </button>
+                        <button id="deleteListButton" class="clear-button">
+                            Delete list
+                        </button>
+                    </div>
+
+                    <p id="statusMessage" class="status-message"
+                        aria-live="polite"></p>
+                </div>
+            </section>
+
+            <section id="savedView" hidden>
+                <div class="task-card">
+                    <div class="list-heading">
+                        <span>SAVED LISTS</span>
+                        <span id="savedCount">0 saved</span>
+                    </div>
+
+                    <div id="savedLists"></div>
+                    <p id="emptySaved" class="empty-message">
+                        Your saved lists will appear here.
+                    </p>
+                </div>
+            </section>
+        </section>
+        <div id="modalOverlay" class="modal-overlay" hidden>
+    <div class="modal">
+        <div class="modal-icon" id="modalIcon">✦</div>
+        <h2 id="modalTitle">Save your list</h2>
+        <p id="modalMessage">Choose a name for your saved list.</p>
+
+        <input id="modalInput" type="text"
+            placeholder="Enter list name" maxlength="60">
+
+        <div class="modal-actions">
+            <button id="modalCancel" class="modal-cancel">Cancel</button>
+            <button id="modalConfirm" class="modal-confirm">Save list</button>
+        </div>
+    </div>
+</div>  
+    </main>
+</body>
+</html>
